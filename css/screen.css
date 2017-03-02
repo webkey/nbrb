@@ -53,7 +53,8 @@ a {
 }
 
 a:hover {
-	color: #660000;
+	/*color: #660000;*/
+	color: #c38b00;
 }
 
 b {
@@ -448,8 +449,9 @@ h5,
 
 
 .color--red {
-	color: rgba(169,41,82,1);
-	color: #990033;
+	/*color: rgba(169,41,82,1);*/
+	/*color: #990033;*/
+	color: #f00;
 }
 
 
@@ -2725,8 +2727,8 @@ input[type="checkbox"]:checked + span:after {
 	bottom: 0;
 	left: 0;
 	width: 0;
-	height: 1px;
-	background-color: #bea15c;
+	height: 2px;
+	background-color: #990033;
 	transition: 0.4s;
 	z-index: 1;
 }
@@ -2806,11 +2808,42 @@ input[type="checkbox"]:checked + span:after {
 
 .input__success ~ .note__success {
 	display: block;
-	background:transparent url('../i/icons/ico-success.svg') 0 0 no-repeat;
+	/*background:transparent url('../i/icons/ico-success.svg') 0 0 no-repeat;*/
 	width:  24px;
 	height: 24px;
 	-webkit-background-size: cover;
 	background-size: cover;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.input__success ~ .note__success:before,
+.input__success ~ .note__success:after{
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 2px;
+	border-radius: 2px;
+	background: #c4ab6b;
+	-webkit-transition-property: background;
+	transition-property: background;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
+}
+
+.input__success ~ .note__success:before{
+	width: 16px;
+	margin: -1px 0 0 -5px;
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+.input__success ~ .note__success:after{
+	width: 10px;
+	margin: 1px 0 0 -10px;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
 .note__success img {
@@ -2819,11 +2852,12 @@ input[type="checkbox"]:checked + span:after {
 }
 
 .input__error ~ label {
-	color: #cc0033!important;
+	/*color: #990033!important;*/
+	color: tomato!important;
 }
 
 .input__error ~ .focus-border {
-	background-color: #cc0033;
+	background-color: tomato;
 }
 
 .selectize-control.single.has-content .selectize-input:after {

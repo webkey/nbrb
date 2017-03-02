@@ -360,6 +360,13 @@ img {
 	width: auto!important;
 	text-transform: uppercase;
 }
+.pub__footer a:hover:before{
+	color: #fff!important;
+}
+
+.pub__footer a[href$=".pdf"]{
+	color: #000;
+}
 
 .pub__footer a[href$=".pdf"]:before {
 	content: "pdf-файл";
@@ -485,8 +492,20 @@ img {
 .input input:focus ~ label,
 .input textarea:focus ~ label,
 .input .has-content ~ label,
-.input .bxlhe-frame ~ label {
+.input .bxlhe-frame ~ label,
+.input__error ~ label{
 	font-size: 16px;
+	color: #000 !important;
+}
+
+.csstransforms .input input:focus ~ label,
+.csstransforms .input textarea:focus ~ label,
+.csstransforms .input .has-content ~ label,
+.csstransforms .input .bxlhe-frame ~ label {
+	-webkit-transform: translateY(-45px);
+	-ms-transform: translateY(-45px);
+	-o-transform: translateY(-45px);
+	transform: translateY(-45px);
 }
 
 .input__error ~ .note__error {
@@ -494,56 +513,77 @@ img {
 	color: #fff;
 	font-size: 16px;
 	font-weight: 700;
+	right: 3px;
+	top: 100%;
+	margin-top: 1px;
+	outline: 3px solid #000;
+}
+
+.input__success ~ .note__success:before,
+.input__success ~ .note__success:after{
+	background: #000;
+	height: 3px;
 }
 
 .input__success ~ .note__success {
-	right: 10px;
+right: 10px;
 }
 
 .reg__steps .step {
-	color: #000;
-	border-color: #000;
-	background: #fff;
-	font-weight: 800;
+color: #000;
+border-color: #000;
+background: #fff;
+font-weight: 800;
 }
 
 .input > .focus-border {
-	background-color: #000;
+background-color: #000;
+}
+
+.form-row {
+	margin-bottom: 60px;
 }
 
 
 
 
 .link-descr {
-	color: #000;
-	font-size: 16px;
+color: #000;
+font-size: 16px;
 }
 
 .block-item {
-	border: 2px solid #000;
-	margin-top: -2px;
+border: 2px solid #000;
+margin-top: -2px;
 }
 
 .block-title {
-	background: #fff;
-	font-size: 18px;
+background: #fff;
+font-size: 18px;
 }
 
 .block-link {
-	border: 2px solid #000;
-	margin-top: -2px;
-	background: #fff;
-	font-size: 18px;
+border: 2px solid #000;
+margin-top: -2px;
+background: #fff;
+font-size: 18px;
 }
 
 .block-title:after {
-	color: #000;
-	-webkit-box-shadow: 0 0 0 2px #000;
-	box-shadow: 0 0 0 2px #000;
+color: #000;
+-webkit-box-shadow: 0 0 0 2px #000;
+box-shadow: 0 0 0 2px #000;
+}
+
+.block-title:hover:after{
+background: none;
+color: #fff;
+-webkit-box-shadow: 0 0 0 2px #fff;
+box-shadow: 0 0 0 2px #fff;
 }
 
 .block-content {
-	border-color: #000;
+border-color: #000;
 }
 
 
@@ -551,84 +591,114 @@ img {
 
 
 blockquote {
-	border: 2px solid #000;
-	color: #000;
+border: 2px solid #000;
+color: #000;
 }
 
 blockquote:before, blockquote:after {
-	color: #000;
+color: #000;
 }
 
 
 small {
-	font-size: 16px;
+font-size: 16px;
 }
 
 
 .digest-expand {
-	text-align: center;
+text-align: center;
 }
 
 .digest-expand:after {
-	content:"Показать еще";
-	display: inline-block;
-	background: none;
-	-webkit-box-shadow: 0 0 0 0 transparent;
-	box-shadow: 0 0 0 0 transparent;
-	height: auto;
-	width: auto;
-	font-size: 18px;
-	border-radius: 0;
-	border: 2px solid #000;
-	text-align: center;
-	padding: 0.5rem;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+content:"Показать еще";
+display: inline-block;
+background: none;
+-webkit-box-shadow: 0 0 0 0 transparent;
+box-shadow: 0 0 0 0 transparent;
+height: auto;
+width: auto;
+font-size: 18px;
+border-radius: 0;
+border: 2px solid #000;
+text-align: center;
+padding: 0.5rem;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
 }
 
 .digest-expand:hover:after {
-	background: #000;
-	color: #fff;
+background: #000;
+color: #fff;
 }
 
 
 
 .b-feedback > a:hover,
 .topnav__phone > a:hover {
-	background-color: #fff;
-	color: #000;
+background-color: #fff;
+color: #000;
 }
 
 .b-feedback > a:hover .svg path,
 .topnav__phone > a:hover .svg path {
-	fill: #000;
+fill: #000;
 }
 
 
 .res-list a:hover {
-	opacity: 1;
+opacity: 1;
 }
 
 .usercontent table {
-	border: 0;
+border: 0;
 }
 
 .usercontent th, .usercontent td {
-	border: 1px solid #000;
+border: 1px solid #000;
 }
 
 .usercontent tr:nth-child(2n+1) td {
-	background: transparent;
+background: transparent;
 }
 
 
 
 .accent {
-	background: #000;
-	border: 1px solid #000;
-	font-size: 16px;
-	color: #fff;
-	font-style: normal;
-	font-size: 18px;
+background: #000;
+border: 1px solid #000;
+font-size: 16px;
+color: #fff;
+font-style: normal;
+font-size: 18px;
 }
+
+/* placeholder */
+.search__input::-webkit-input-placeholder{
+	color: #000;
+}
+.search__input:-moz-placeholder{
+	color: #000;
+}
+.search__input::-moz-placeholder{
+	color: #000;
+}
+.search__input:-ms-input-placeholder{
+	color: #000;
+}
+
+.search__input:focus::-webkit-input-placeholder{ opacity: 0; }
+.search__input:focus:-moz-placeholder{ opacity: 0; }
+.search__input:focus::-moz-placeholder{ opacity: 0; }
+.search__input:focus:-ms-input-placeholder{ opacity: 0; }
+
+.search__input:focus{
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.search__submit .svg *,
+.search__submit:hover .svg *{
+	fill: #000;
+}
+/* placeholder end */
