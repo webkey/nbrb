@@ -1812,6 +1812,8 @@ h5,
 
 .p-list--slider .p-item {
 	margin: 0 10px;
+	height: 100%;
+	box-sizing: border-box;
 }
 
 
@@ -2155,6 +2157,8 @@ blockquote:after {
 	display: block;
 	padding: 1rem 3rem 1rem 2rem;
 	text-decoration: none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 }
 
 
@@ -2715,6 +2719,10 @@ input[type="checkbox"]:checked + span:after {
 	-moz-appearance: none;
 	appearance: none;
 }
+.input input.input__error,
+.input textarea.input__error {
+	border-color: tomato;
+}
 
 .input textarea {
 	display: block;
@@ -2733,14 +2741,17 @@ input[type="checkbox"]:checked + span:after {
 	z-index: 1;
 }
 
+.input .has-content ~ .focus-border {
+	background-color: #d0c2a5;
+}
+
 .input > label {
 	position: absolute;
 	left: 0;
-	width: 100%;
+	width: calc(100% - 15px*2);
 	top: 14px;
 	color: #333;
 	transition: 0.3s;
-	z-index: -1;
 	font-size: 18px;
 	z-index: 1;
 	pointer-events: none;

@@ -642,3 +642,25 @@
 		width: 95%;
 	}
 }
+
+@media only screen and (max-width: 359px) {
+	.topnav__phone > a,
+	.b-feedback > a{
+		min-width: 50px;
+	}
+	.topnav__gain > a {
+		padding: 0 15px;
+	}
+	.topnav__lang a{
+		width: 50px;
+	}
+	.l-aside {
+		left: -95%;
+		width: 95%;
+	}
+
+	.input__error ~ .note__error {
+		font-size: 13px;
+		font-weight: 400;
+	}
+}

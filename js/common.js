@@ -186,7 +186,7 @@ var layoutStick = function() {
 
 var layoutRecalc = function() {
 
-	console.log(windowWidth + ' layoutRecalc');
+	// console.log(windowWidth + ' layoutRecalc');
 
 	if (windowWidth < 768) {
 
@@ -237,14 +237,24 @@ if ($('.promo__slider').length > 0) {
 }
 
 var setOwlStageHeight = function(event) {
-	var maxHeight = 0;
-	$('.owl-item.active', $p_slider).each(function () {
-		var thisHeight = parseInt( $(this).height() );
-		maxHeight=(maxHeight>=thisHeight?maxHeight:thisHeight);
-	});
-	$('.owl-item.active .p-item', $p_slider).css('height', maxHeight );
-	$('.owl-carousel', $p_slider).css('height', maxHeight );
-	$('.owl-stage-outer', $p_slider).css('height', maxHeight );
+
+	var $files = $('.p-list--slider');
+
+	if ($files.length) {
+		$('.owl-item', $files).matchHeight({
+			byRow: true, property: 'height', target: null, remove: false
+		});
+	}
+
+	/*20170303*/
+	// var maxHeight = 0;
+	// $('.owl-item.active', $p_slider).each(function () {
+	// 	var thisHeight = parseInt( $(this).height() );
+	// 	maxHeight=(maxHeight>=thisHeight?maxHeight:thisHeight);
+	// });
+	// $('.owl-item.active .p-item', $p_slider).css('height', maxHeight );
+	// $('.owl-carousel', $p_slider).css('height', maxHeight );
+	// $('.owl-stage-outer', $p_slider).css('height', maxHeight );
 	// console.log(maxHeight);
 };
 
@@ -256,7 +266,7 @@ if ($('.p-list--slider').length > 0) {
 		slideBy: 4,
 		dots: true,
 		lazyLoad: true,
-		autoHeight: true,
+		// autoHeight: true,
 		onInitialized: setOwlStageHeight,
 		onResized: setOwlStageHeight,
 		onTranslated: setOwlStageHeight,
@@ -353,8 +363,10 @@ var statsScrollCustom =  function() {
 
 		el.next().slideToggle(100, function(){
 			layoutRecalc();
-			$stats_scroll.reload();
-			scrollVisibility();
+			if (desktop === true) {
+				$stats_scroll.reload();
+				scrollVisibility();
+			}
 		});
 	});
 
@@ -541,57 +553,59 @@ $(document).ready(function() {
 
 
 
-Parsley.addMessages('ru', {
-	defaultMessage: "Некорректное значение.",
-	type: {
-		email:        "Введите адрес электронной почты.",
-		url:          "Введите URL адрес.",
-		number:       "Введите число.",
-		integer:      "Введите целое число.",
-		digits:       "Введите только цифры.",
-		alphanum:     "Введите буквенно-цифровое значение."
-	},
-	notblank:       "Заполните поле.",
-	required:       "Обязательное поле.",
-	pattern:        "Это значение некорректно.",
-	min:            "Это значение должно быть не менее чем %s.",
-	max:            "Это значение должно быть не более чем %s.",
-	range:          "Это значение должно быть от %s до %s.",
-	minlength:      "Это значение должно содержать не менее %s символов.",
-	maxlength:      "Это значение должно содержать не более %s символов.",
-	length:         "Это значение должно содержать от %s до %s символов.",
-	mincheck:       "Выберите не менее %s значений.",
-	maxcheck:       "Выберите не более %s значений.",
-	check:          "Выберите от %s до %s значений.",
-	equalto:        "Это значение должно совпадать.",
-	dateiso:  "Это значение должно быть корректной датой (ГГГГ-ММ-ДД).",
-	minwords: "Это значение должно содержать не менее %s слов.",
-	maxwords: "Это значение должно содержать не более %s слов.",
-	words:    "Это значение должно содержать от %s до %s слов.",
-	gt:       "Это значение должно быть больше.",
-	gte:      "Это значение должно быть больше или равно.",
-	lt:       "Это значение должно быть меньше.",
-	lte:      "Это значение должно быть меньше или равно.",
-	notequalto: "Это значение должно отличаться."
-});
-
-Parsley.setLocale('ru');
-
-
-
-var Regform = {
-
-	userCheck: function(el) {
-
-		//var result = Math.random() > 0.5 ? true : false;
-
-		return true;
-	}
-
-};
 
 
 if ($('form').length > 0) {
+
+	Parsley.addMessages('ru', {
+		defaultMessage: "Некорректное значение.",
+		type: {
+			email:        "Введите адрес электронной почты.",
+			url:          "Введите URL адрес.",
+			number:       "Введите число.",
+			integer:      "Введите целое число.",
+			digits:       "Введите только цифры.",
+			alphanum:     "Введите буквенно-цифровое значение."
+		},
+		notblank:       "Заполните поле.",
+		required:       "Обязательное поле.",
+		pattern:        "Это значение некорректно.",
+		min:            "Это значение должно быть не менее чем %s.",
+		max:            "Это значение должно быть не более чем %s.",
+		range:          "Это значение должно быть от %s до %s.",
+		minlength:      "Это значение должно содержать не менее %s символов.",
+		maxlength:      "Это значение должно содержать не более %s символов.",
+		length:         "Это значение должно содержать от %s до %s символов.",
+		mincheck:       "Выберите не менее %s значений.",
+		maxcheck:       "Выберите не более %s значений.",
+		check:          "Выберите от %s до %s значений.",
+		equalto:        "Это значение должно совпадать.",
+		dateiso:  "Это значение должно быть корректной датой (ГГГГ-ММ-ДД).",
+		minwords: "Это значение должно содержать не менее %s слов.",
+		maxwords: "Это значение должно содержать не более %s слов.",
+		words:    "Это значение должно содержать от %s до %s слов.",
+		gt:       "Это значение должно быть больше.",
+		gte:      "Это значение должно быть больше или равно.",
+		lt:       "Это значение должно быть меньше.",
+		lte:      "Это значение должно быть меньше или равно.",
+		notequalto: "Это значение должно отличаться."
+	});
+
+	Parsley.setLocale('ru');
+
+
+
+	var Regform = {
+
+		userCheck: function(el) {
+
+			//var result = Math.random() > 0.5 ? true : false;
+
+			return true;
+		}
+
+	};
+
 
 	$('form').parsley({
 		trigger: 'keypress',

@@ -450,6 +450,7 @@ img {
 
 .button {
 	background-color: #000;
+	color: #fff;
 	-webkit-transition: 0s;
 	-o-transition: 0s;
 	transition: 0s;
@@ -519,6 +520,13 @@ img {
 	outline: 3px solid #000;
 }
 
+@media only screen and (max-width: 359px) {
+	.input__error ~ .note__error {
+		font-size: 13px;
+		font-weight: 400;
+	}
+}
+
 .input__success ~ .note__success:before,
 .input__success ~ .note__success:after{
 	background: #000;
@@ -536,7 +544,13 @@ background: #fff;
 font-weight: 800;
 }
 
-.input > .focus-border {
+.input input.input__error,
+.input textarea.input__error{
+	border-color: #000;
+}
+
+.input > .focus-border,
+.input .has-content ~ .focus-border {
 background-color: #000;
 }
 
