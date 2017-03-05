@@ -637,6 +637,12 @@
 }
 
 @media only screen and (max-width: 400px) {
+	.page-main,
+	.page-aside-right{
+		padding-left: 1.2rem;
+		padding-right: 1.2rem;
+	}
+
 	.l-aside {
 		left: -95%;
 		width: 95%;
@@ -644,6 +650,7 @@
 }
 
 @media only screen and (max-width: 359px) {
+
 	.topnav__phone > a,
 	.b-feedback > a{
 		min-width: 50px;
@@ -662,5 +669,29 @@
 	.input__error ~ .note__error {
 		font-size: 13px;
 		font-weight: 400;
+	}
+
+	.n-article {
+		padding-bottom: 1rem;
+	}
+	.n-date{
+		float: left;
+		clear: both;
+		position: relative;
+		margin-bottom: 2em;
+	}
+	.n-date:after{
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: -4px;
+		height: 0;
+		width: 40px;
+		margin-left: -20px;
+		border-top: 1px solid #000;
+	}
+	.n-article .pub-item {
+		float: left;
+		width: 100%;
 	}
 }
