@@ -3111,6 +3111,7 @@ h1 + .accent {
 
 .thing-preview{
 	overflow: hidden;
+	max-width: 1752px;
 }
 .thing-preview__list{
 	font-size: 0;
@@ -3120,14 +3121,50 @@ h1 + .accent {
 .thing-preview__item{
 	display: inline-block;
 	position: relative;
-	width: 24.98%;
+	width: 19.98%;
 	vertical-align: top;
 	padding: 0 10px 20px;
 	font-size: 14px;
 	letter-spacing: normal;
 	box-sizing: border-box;
 }
-.thing-preview__inner{
+@media only screen and (max-width: 1870px) {
+	.thing-preview__item{
+		width: 24.98%;
+	}
+}
+@media only screen and (max-width: 1505px) {
+	.thing-preview__item{
+		width: 33.28%;
+	}
+}
+@media only screen and (max-width: 1132px) {
+	.thing-preview__item{
+		width: 49.98%;
+	}
+}
+@media only screen and (max-width: 991px) {
+	.thing-preview__item{
+		width: 33.28%;
+	}
+}
+@media only screen and (max-width: 872px) {
+	.thing-preview__item{
+		width: 49.98%;
+	}
+}
+@media only screen and (max-width: 520px) {
+	.thing-preview {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 320px;
+	}
+	.thing-preview__item{
+		width: 100%;
+	}
+}
+.thing-preview__inner,
+.thing-preview__inner:hover{
 	display: block;
 	position: relative;
 	text-decoration: none;
@@ -3154,26 +3191,66 @@ h1 + .accent {
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	width: 280px;
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 }
+.thing-preview__align{
+	width: 280px;
+	max-width: calc(100% - 2rem);
+}
 .thing-preview__img{
-	height: 140px;
 	position: relative;
+	overflow: hidden;
+	max-height: 140px;
 	margin-bottom: 20px;
 	box-sizing: border-box;
+	z-index: 1;
+}
+.thing-preview__img:before{
+	content: '';
+	display: block;
+	position: relative;
+	z-index: -1;
+	height: 0;
+	padding-top: 50%;
 }
 .thing-preview__img figure{
 	display: block;
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
 	margin: 0;
+}
+.thing-preview__img .thing-preview__back{
+	width: 0;
+	z-index: 1;
+	-webkit-transition-property: width;
+	transition-property: width;
+	-webkit-transition-duration: 0.06s;
+	transition-duration: 0.06s;
+}
+.thing-preview__img figure > div{
 	height: 100%;
 }
 .thing-preview__img img{
 	vertical-align: top;
-	max-height: 100%;
-	max-width: none;
+	height: 100%;
+	max-height: none;
+	object-fit: contain;
+	-o-object-fit: contain;
+}
+.thing-preview-object-fit{
+	background: no-repeat 50% 50%;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+.thing-preview-object-fit img{
+	opacity: 0;
+	visibility: hidden;
 }
 .thing-preview__title{
 	font-weight: 700;

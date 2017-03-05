@@ -714,3 +714,51 @@ var inputEffect = function() {
 		}
 	});
 };
+
+$(document).ready(function() {
+	function rollSides($altSide, $container) {
+		$container.on("mousemove vmousemove touchmove", function (e) {
+
+			var wrapperLeftPos = $container.offset().left,
+				wrapperWidth = $container.outerWidth(),
+				maxRightPos = wrapperLeftPos + wrapperWidth,
+				leftValue = (e.pageX || e.originalEvent.touches[0].pageX);
+
+			$altSide.addClass("resizable");
+
+			leftValue < wrapperLeftPos ? leftValue = wrapperLeftPos : leftValue > maxRightPos && (leftValue = maxRightPos);
+
+			var widthValue = 100 * (leftValue - wrapperLeftPos) / wrapperWidth + "%";
+
+			$(".resizable").css("width", widthValue);
+
+		}).on("mouseleave vmouseup touchend", function () {
+			$altSide.removeClass("resizable");
+		});
+
+		$(window).on('load debouncedresize', function () {
+			$altSide.children('div').css('width', $altSide.parent().outerWidth());
+		})
+	}
+
+	var $jsContainer = $(".js-roll")
+	if ($jsContainer) {
+		$jsContainer.each(function () {
+			var $thisBox=$(this),
+				$segment=$thisBox.find(".js-roll-side");
+			rollSides($segment, $thisBox)
+		})
+	}
+
+	if ( !Modernizr.objectfit ) {
+		$('.thing-preview__img > figure > div').each(function () {
+			var $container = $(this),
+				imgUrl = $container.find('img').prop('src');
+			if (imgUrl) {
+				$container
+				.css('backgroundImage', 'url(' + imgUrl + ')')
+				.addClass('thing-preview-object-fit');
+			}
+		});
+	}
+});
