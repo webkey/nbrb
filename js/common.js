@@ -751,13 +751,13 @@ $(document).ready(function() {
 	}
 
 	if ( !Modernizr.objectfit ) {
-		$('.thing-preview__img > figure > div').each(function () {
+		$('.subject-preview__img > figure > div').each(function () {
 			var $container = $(this),
 				imgUrl = $container.find('img').prop('src');
 			if (imgUrl) {
 				$container
 				.css('backgroundImage', 'url(' + imgUrl + ')')
-				.addClass('thing-preview-object-fit');
+				.addClass('subject-preview-fit');
 			}
 		});
 	}
