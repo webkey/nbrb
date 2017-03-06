@@ -839,4 +839,27 @@ $(document).ready(function() {
 
 	proportionCoin();
 
+	/*simple accordion*/
+	function simpleAccordion($hand, $panel, animateSpeed) {
+		if ($panel.hasClass('is-open')) {
+			$panel.toggle().prev().addClass('active');
+		}
+
+		$hand.on('click', function (e) {
+			e.preventDefault();
+
+			$(this).toggleClass('active');
+			$panel.stop().slideToggle(animateSpeed);
+		})
+	}
+
+	var $simpleAccordionHand = $('.simple-accordion-head-js');
+	if ($simpleAccordionHand.length) {
+		$simpleAccordionHand.each(function () {
+			var $thisHand = $(this);
+
+			simpleAccordion($thisHand, $thisHand.next(), 200);
+		})
+	}
+
 });

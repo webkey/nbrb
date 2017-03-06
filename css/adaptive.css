@@ -130,6 +130,13 @@
 	.p-col:nth-child(2n+1) {
 		clear: both;
 	}
+
+	.structure__item{
+		padding: 2rem;
+	}
+	.structure__img {
+		margin-right: 2rem;
+	}
 }
 
 @media only screen and (max-width: 991px) {
@@ -461,6 +468,13 @@
     .subject-card__content{
 	    padding-top: 0;
     }
+
+	.structure__img{
+		float: none;
+		margin-right: 0;
+		margin-bottom: 1rem;
+		width: auto;
+	}
 }
 
 @media only screen and (max-width: 649px) {
