@@ -752,17 +752,34 @@ $(document).ready(function() {
 		})
 	}
 
-	if ( !Modernizr.objectfit ) {
-		$('.subject-preview__img > figure > div').each(function () {
-			var $container = $(this),
-				imgUrl = $container.find('img').prop('src');
-			if (imgUrl) {
-				$container
+	/*css object fit fixed for ie 9*/
+	function objectfitContainFixed($img) {
+		var imgUrl = $img.prop('src');
+		if (imgUrl) {
+			$img.parent()
 				.css('backgroundImage', 'url(' + imgUrl + ')')
-				.addClass('subject-preview-fit');
-			}
-		});
+				.addClass('fit-contain');
+		}
 	}
+
+	if ( !Modernizr.objectfit ) {
+		var $subjectPreviewImg = $('.subject-preview__img img');
+		if ($subjectPreviewImg.length) {
+			$subjectPreviewImg.each(function () {
+				var $thisImg = $(this);
+				objectfitContainFixed($thisImg);
+			});
+		}
+
+		var $coinMemorySliderImg = $('.coin-memory__slider img');
+		if ($coinMemorySliderImg.length) {
+			$coinMemorySliderImg.each(function () {
+				var $thisImg = $(this);
+				objectfitContainFixed($thisImg);
+			});
+		}
+	}
+	/*css object fit fixed for ie 9 end*/
 
 	/*subjects slider*/
 	var $subjectSlider = $('.subject-slider-js');
@@ -799,41 +816,55 @@ $(document).ready(function() {
 
 	}
 
-	var coinsSize = {
-		'1k': 15.00,
-		'2k': 17.50,
-		'5k': 19.80,
-		'10k': 17.70,
-		'20k': 20.35,
-		'50k': 22.25,
-		'1r': 21.50,
-		'2r': 23.50
-	};
+	var coinsSize = [
+		{
+			'1k': 15.00,
+			'2k': 17.50,
+			'5k': 19.80,
+			'10k': 17.70,
+			'20k': 20.35,
+			'50k': 22.25,
+			'1r': 21.50,
+			'2r': 23.50
+		}
+		// ,{
+		// 	'ipbm-middle': 45.00,
+		// 	'ipbm-small': 23.50,
+		// 	'ipbm-large': 53.00,
+		// 	'ipbm-largest': 135.00
+		// }
+	];
 
 	function proportionCoin() {
 
 		var maxSizeCoin = 0;
 
-		for (var denomination in coinsSize) {
-			if (maxSizeCoin < coinsSize[denomination]) {
-				maxSizeCoin = coinsSize[denomination];
+		for(var i = 0; i < coinsSize.length; i++) {
+
+			var coinsSizeItem = coinsSize[i];
+
+			for (var denomination in coinsSizeItem) {
+				var coinsSizeCurrent = coinsSizeItem[denomination];
+				if (maxSizeCoin < coinsSizeCurrent) {
+					maxSizeCoin = coinsSizeCurrent;
+				}
 			}
+
+			for (var coin in coinsSizeItem) {
+				var scaleSize = Math.round(coinsSizeItem[coin]/maxSizeCoin*1000)/1000;
+
+				$('[data-coin = ' + coin + ']').css({
+					'-webkit-transform' : 'scale(' + scaleSize + ')',
+					'-ms-transform'     : 'scale(' + scaleSize + ')',
+					'transform'         : 'scale(' + scaleSize + ')'
+				});
+
+				console.log("scaleSize: ", scaleSize);
+				console.log("coinSize[denomination]: ", coin + ': ' + coinsSize[coin]);
+			}
+
+			// Math.round(x)
 		}
-
-		for (var coin in coinsSize) {
-			var scaleSize = Math.round(coinsSize[coin]/maxSizeCoin*1000)/1000;
-
-			$('[data-denomination = ' + coin + ']').css({
-				'-webkit-transform' : 'scale(' + scaleSize + ')',
-				'-ms-transform'     : 'scale(' + scaleSize + ')',
-				'transform'         : 'scale(' + scaleSize + ')'
-			});
-
-			// console.log("scaleSize: ", scaleSize);
-			// console.log("coinSize[denomination]: ", coin + ': ' + coinsSize[coin]);
-		}
-
-		// Math.round(x)
 
 	}
 
