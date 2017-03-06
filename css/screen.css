@@ -3179,6 +3179,10 @@ h1 + .accent {
 	color: #666;
 	box-sizing: border-box;
 	z-index: 1;
+	-webkit-transition-property: background-color, border-color;
+	transition-property: background-color, border-color;
+	-webkit-transition-duration: 0.2s;
+	transition-duration: 0.2s;
 }
 .subject-preview__inner:before{
 	content: '';
@@ -3190,6 +3194,7 @@ h1 + .accent {
 }
 .subject-preview__inner:hover{
 	box-shadow: inset 0 0 0 1px #cfc2a5;
+	background-color: #efe7d6;
 }
 .subject-preview__align{
 	position: absolute;
@@ -3645,5 +3650,84 @@ h1 + .accent {
 .usercontent ul ul li:before {
 	content: "•";
 	font-size: 26px;
+}
+
+.user-share{
+	display: block;
+	padding-bottom: 3rem;
+}
+.user-share:before,
+.user-share:after { content: ""; display: table; }
+.user-share:after { clear: both; }
+.user-share:last-child{
+	padding-bottom: 0;
+}
+.user-share__label{
+	float: left;
+	padding-right: 2rem;
+	font-size: 18px;
+	line-height: 40px;
+	font-weight: bold;
+}
+.usercontent .socials--user-share,
+.socials--user-share{
+	padding: 0;
+	margin: 0;
+}
+.socials--user-share{
+	overflow: hidden;
+	font-size: 0;
+	letter-spacing: -4px;
+}
+.usercontent .socials--user-share li,
+.socials--user-share li{
+	padding: 0;
+	margin: 0;
+}
+.socials--user-share li{
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 10px 10px 0;
+	font-size: 16px;
+	letter-spacing: normal;
+}
+.usercontent .socials--user-share li:before,
+.socials--user-share li:before{
+	content: none;
+}
+.socials--user-share .ico{
+	background: lightgrey;
+	border: none;
+	box-shadow: none;
+	border-radius: 0;
+	width: 40px;
+	height: 40px;
+}
+.socials--user-share a:hover .ico{
+	opacity: 0.85;
+}
+.socials--user-share .svg{
+	width: 24px;
+	height: 24px;
+}
+.socials--user-share .svg--small {
+	width: 16px;
+	height: 16px;
+}
+.socials--user-share a:hover .svg * {
+	fill: rgba(255,255,255,1);
+}
+.socials--user-share a[target="_blank"]:after{
+	content: none;
+}
+.socials--user-share a span:last-child{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
 }
 
