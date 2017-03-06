@@ -2077,6 +2077,10 @@ blockquote:after {
 	padding-bottom: 3rem;
 }
 
+h1 + .user-section{
+	padding-top: 0;
+}
+
 .user-section p {
 	padding-bottom: 0.75rem;
 }
@@ -3242,6 +3246,8 @@ h1 + .accent {
 	max-height: none;
 	object-fit: contain;
 	-o-object-fit: contain;
+	/*-webkit-backface-visibility: hidden;*/
+	/*backface-visibility: hidden;*/
 }
 .subject-preview-fit{
 	background: no-repeat 50% 50%;
@@ -3274,6 +3280,7 @@ h1 + .accent {
 .subject-card__visual{
 	float: left;
 	width: 50%;
+	max-width: 600px;
 	padding: 2rem;
 	box-sizing: border-box;
 }
@@ -3313,6 +3320,11 @@ h1 + .accent {
 	position: relative;
 	overflow: hidden;
 	z-index: 1;
+	box-sizing: border-box;
+}
+.subject-card__slider .owl-item{
+	padding: 0 40px;
+	box-sizing: border-box;
 }
 .subject-card__slide:before {
 	content: '';
@@ -3339,6 +3351,7 @@ h1 + .accent {
 	transform: translate(-50%, -50%);
 	width: auto !important;
 	max-width: 100%;
+	max-height: 100%;
 }
 .subject-card__slider .owl-prev,
 .subject-card__slider .owl-next{
@@ -3378,8 +3391,8 @@ h1 + .accent {
 }
 .subject-card__slider .owl-prev:hover:before,
 .subject-card__slider .owl-next:hover:after{
-	opacity: 1;
-	visibility: visible;
+	/*opacity: 1;*/
+	/*visibility: visible;*/
 }
 .subject-card__slider .owl-prev{
 	left: 0;
@@ -3420,7 +3433,7 @@ h1 + .accent {
 	height: 28px;
 	width: 2px;
 	border-radius: 2px;
-	background: #6f6e6e;
+	background-color: #6f6e6e;
 	-webkit-backface-visibility: hidden;
 	backface-visibility: hidden;
 	-webkit-font-smoothing: antialiased;
@@ -3432,7 +3445,12 @@ h1 + .accent {
 	-ms-user-select: none;
 	user-select: none;
 }
-
+.subject-card__slider .owl-prev:hover i:before,
+.subject-card__slider .owl-prev:hover i:after,
+.subject-card__slider .owl-next:hover i:before,
+.subject-card__slider .owl-next:hover i:after{
+	background-color: #600;
+}
 .subject-card__slider .owl-prev i:before{
 	left: 0;
 	bottom: 50%;
@@ -3484,3 +3502,38 @@ h1 + .accent {
 	float: left;
 	width: 100%;
 }
+.subject-card__widget{
+	margin-bottom: 2rem;
+}
+.subject-card__widget:last-child{
+	margin-bottom: 0;
+}
+.product-card__subtitle,
+.user-section .product-card__subtitle{
+	font-size: 16px;
+	line-height: 1.4;
+	font-weight: 700;
+	margin: 0;
+	padding-bottom: 0;
+}
+.product-card__text{
+	font-size: 16px;
+	line-height: 1.7;
+}
+.product-card__text ul{
+	list-style: none;
+	padding: 0 0 1rem;
+	margin: 0;
+}
+.product-card__text ul:last-child{
+	padding-bottom: 0;
+}
+.product-card__text ul li{
+	padding: 0;
+	margin: 0;
+	line-height: inherit;
+}
+.product-card__text ul li:before{
+	content: none;
+}
+

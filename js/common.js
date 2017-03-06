@@ -716,6 +716,8 @@ var inputEffect = function() {
 };
 
 $(document).ready(function() {
+	"use strict";
+
 	function rollSides($altSide, $container) {
 		$container.on("mousemove vmousemove touchmove", function (e) {
 
@@ -796,5 +798,45 @@ $(document).ready(function() {
 		})
 
 	}
+
+	var coinsSize = {
+		'1k': 15.00,
+		'2k': 17.50,
+		'5k': 19.80,
+		'10k': 17.70,
+		'20k': 20.35,
+		'50k': 22.25,
+		'1r': 21.50,
+		'2r': 23.50
+	};
+
+	function proportionCoin() {
+
+		var maxSizeCoin = 0;
+
+		for (var denomination in coinsSize) {
+			if (maxSizeCoin < coinsSize[denomination]) {
+				maxSizeCoin = coinsSize[denomination];
+			}
+		}
+
+		for (var coin in coinsSize) {
+			var scaleSize = Math.round(coinsSize[coin]/maxSizeCoin*1000)/1000;
+
+			$('[data-denomination = ' + coin + ']').css({
+				'-webkit-transform' : 'scale(' + scaleSize + ')',
+				'-ms-transform'     : 'scale(' + scaleSize + ')',
+				'transform'         : 'scale(' + scaleSize + ')'
+			});
+
+			// console.log("scaleSize: ", scaleSize);
+			// console.log("coinSize[denomination]: ", coin + ': ' + coinsSize[coin]);
+		}
+
+		// Math.round(x)
+
+	}
+
+	proportionCoin();
 
 });
