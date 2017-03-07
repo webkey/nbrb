@@ -859,8 +859,8 @@ $(document).ready(function() {
 					'transform'         : 'scale(' + scaleSize + ')'
 				});
 
-				console.log("scaleSize: ", scaleSize);
-				console.log("coinSize[denomination]: ", coin + ': ' + coinsSize[coin]);
+				// console.log("scaleSize: ", scaleSize);
+				// console.log("coinSize[denomination]: ", coin + ': ' + coinsSize[coin]);
 			}
 
 			// Math.round(x)
@@ -892,5 +892,41 @@ $(document).ready(function() {
 			simpleAccordion($thisHand, $thisHand.next(), 200);
 		})
 	}
+
+	/*datapicker initial (flatpickr)*/
+	function datapickerInit() {
+		var dataFrom, dataTo;
+
+		dataFrom = $(".data-01-from").flatpickr({
+			"locale": "ru",
+			altInput: false,
+			altFormat: 'd.m.Y',
+			onValueUpdate: function() {
+				$('.flatpickr.active').addClass('has-content');
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// console.log("selectedDates: ", selectedDates);
+				// console.log("dateStr: ", dateStr);
+				// console.log("instance: ", instance);
+				dataTo.set('minDate', selectedDates);
+			}
+		});
+
+		dataTo = $(".data-01-to").flatpickr({
+			"locale": "ru",
+			altInput: false,
+			altFormat: 'd.m.Y',
+			onValueUpdate: function() {
+				$('.flatpickr.active').addClass('has-content');
+			},
+			onChange: function(selectedDates, dateStr, instance) {
+				// console.log("selectedDates: ", selectedDates);
+				// console.log("dateStr: ", dateStr);
+				// console.log("instance: ", instance);
+			}
+		});
+	}
+
+	datapickerInit();
 
 });
