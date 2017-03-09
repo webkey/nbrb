@@ -895,36 +895,51 @@ $(document).ready(function() {
 
 	/*datapicker initial (flatpickr)*/
 	function datapickerInit() {
-		var dataFrom, dataTo;
+		var $datapickerInput = $('.flatpickr');
 
-		dataFrom = $(".data-01-from").flatpickr({
+		if (!$datapickerInput.length) {
+			return false;
+		}
+
+		$datapickerInput.flatpickr({
 			"locale": "ru",
 			altInput: false,
 			altFormat: 'd.m.Y',
 			onValueUpdate: function() {
 				$('.flatpickr.active').addClass('has-content');
-			},
-			onChange: function(selectedDates, dateStr, instance) {
-				// console.log("selectedDates: ", selectedDates);
-				// console.log("dateStr: ", dateStr);
-				// console.log("instance: ", instance);
-				dataTo.set('minDate', selectedDates);
 			}
 		});
 
-		dataTo = $(".data-01-to").flatpickr({
-			"locale": "ru",
-			altInput: false,
-			altFormat: 'd.m.Y',
-			onValueUpdate: function() {
-				$('.flatpickr.active').addClass('has-content');
-			},
-			onChange: function(selectedDates, dateStr, instance) {
-				// console.log("selectedDates: ", selectedDates);
-				// console.log("dateStr: ", dateStr);
-				// console.log("instance: ", instance);
-			}
-		});
+		// var dataFrom, dataTo;
+		//
+		// dataFrom = $(".data-01-from").flatpickr({
+		// 	"locale": "ru",
+		// 	altInput: false,
+		// 	altFormat: 'd.m.Y',
+		// 	onValueUpdate: function() {
+		// 		$('.flatpickr.active').addClass('has-content');
+		// 	},
+		// 	onChange: function(selectedDates, dateStr, instance) {
+		// 		// console.log("selectedDates: ", selectedDates);
+		// 		// console.log("dateStr: ", dateStr);
+		// 		// console.log("instance: ", instance);
+		// 		dataTo.set('minDate', selectedDates);
+		// 	}
+		// });
+		//
+		// dataTo = $(".data-01-to").flatpickr({
+		// 	"locale": "ru",
+		// 	altInput: false,
+		// 	altFormat: 'd.m.Y',
+		// 	onValueUpdate: function() {
+		// 		$('.flatpickr.active').addClass('has-content');
+		// 	},
+		// 	onChange: function(selectedDates, dateStr, instance) {
+		// 		// console.log("selectedDates: ", selectedDates);
+		// 		// console.log("dateStr: ", dateStr);
+		// 		// console.log("instance: ", instance);
+		// 	}
+		// });
 	}
 
 	datapickerInit();
