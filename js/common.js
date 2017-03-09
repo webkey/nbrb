@@ -944,4 +944,65 @@ $(document).ready(function() {
 
 	datapickerInit();
 
+	/*same links behavior*/
+	function sameLinksBehavior() {
+
+		/*for banknote protections*/
+		var container = '.bt-protections-js';
+		var $container = $(container);
+		var activeClass = 'active';
+
+		$('body').on('mouseenter', container + ' a', function (e) {
+			var $thisLink = $(this);
+			var thisHref = $thisLink.attr('href');
+			var $sameLinks = $('a[href = ' + thisHref + ']');
+			var $thisContainer = $thisLink.closest(container);
+
+			console.log("$sameLinks.length: ", $sameLinks.length);
+			
+			if (thisHref === '#' || thisHref === '') {
+				return;
+			}
+
+			$($container).removeClass(activeClass);
+			$('a', $container).removeClass(activeClass);
+
+			if ($sameLinks.length > 1) {
+				$thisContainer.addClass(activeClass);
+			}
+			$thisContainer.find($sameLinks).addClass(activeClass);
+
+		}).on('mouseleave', '.bt-protections-js a', function () {
+			$($container).removeClass(activeClass);
+			$('a', $container).removeClass(activeClass);
+		});
+	}
+
+	sameLinksBehavior();
+
+	/*popup initial*/
+	function popupInitial(){
+
+		$('.protection-popup-js').magnificPopup({
+			type: 'inline',
+
+			fixedContentPos: true,
+			fixedBgPos: true,
+
+			preloader: false,
+
+			overflowY: 'auto',
+
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-slide-bottom',
+
+			closeBtnInside: true,
+			tClose: 'Закрыть (Esc)',
+			closeMarkup: '<button title="%title%" type="button" class="mfp-close">Закрыть (Esc)</button>'
+		});
+	}
+
+	popupInitial();
+	/*popup initial end*/
 });

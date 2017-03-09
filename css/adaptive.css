@@ -473,7 +473,7 @@
 	    padding-right: 0;
 	    padding-bottom: 2rem;
     }
-    .subject-card__content{
+    .subject-card__visual ~ .subject-card__content{
 	    padding-left: 0;
     }
 
