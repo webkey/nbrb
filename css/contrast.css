@@ -452,11 +452,6 @@ hr {
 	color: #000;
 }
 
-.usercontent th {
-	background: #000;
-	border-color: #666;
-}
-
 
 .usercontent a[href$=".pdf"]:after {
 	content:"pdf-файл";
@@ -731,6 +726,7 @@ span.flatpickr-weekday {
 
 
 
+.text-note,
 .link-descr {
 color: #000;
 font-size: 16px;
@@ -834,16 +830,22 @@ fill: #000;
 opacity: 1;
 }
 
-.usercontent table {
-border: 0;
+.usercontent table{
+	border: 0;
 }
-
-.usercontent th, .usercontent td {
-border: 1px solid #000;
+.usercontent th,
+.usercontent td{
+	border: 1px solid #000;
+	background: #fff;
+	color: #000;
 }
-
-.usercontent tr:nth-child(2n+1) td {
-background: transparent;
+.usercontent tr:nth-child(odd) td{
+	background: transparent;
+}
+.usercontent tr:hover td {
+	background: #fff !important;
+	color: #000 !important;
+	border-color: #000;
 }
 
 .page-main{
