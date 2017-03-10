@@ -1574,7 +1574,7 @@ h5,
 	position: absolute;
 	bottom: 0;
 	left: 40px;
-	width: 100%;
+	width: calc(100% - 40px*2);
 	z-index: 1;
 	padding-bottom: 20px;
 }
@@ -3965,7 +3965,6 @@ h1 + .accent {
 }
 .structure__content ul{
 	font-size: 18px;
-	margin-left: 0;
 	padding-left: 16px;
 }
 .structure__content a.has-arrow{
@@ -4004,12 +4003,44 @@ h1 + .accent {
 .structure__content a:hover span{
 	border-color: #c38b00;
 }
-.usercontent ul ul{
-	margin-left: 20px;
+.structure__content ul,
+.structure__content ul ul{
+	margin-left: 0;
+	padding-left: 40px;
 }
-.usercontent ul ul li:before {
-	content: "•";
-	font-size: 26px;
+.structure__content ul li:before,
+.structure__content ul ul li:before,
+.structure__content ul li:after,
+.structure__content ul ul li:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -30px;
+	width: 20px;
+	background: none;
+	border: dashed #999;
+}
+.structure__content ul li:before,
+.structure__content ul ul li:before{
+	bottom: 0;
+	height: auto;
+	border-width: 0 0 0 1px;
+}
+.structure__content ul li:first-child:before{
+	top: -10px;
+}
+.structure__content ul ul li:first-child:before{
+	top: 0;
+}
+.structure__content ul li:last-child:before,
+.structure__content ul ul li:last-child:before{
+	bottom: auto;
+	height: 24px;
+}
+.structure__content ul li:after,
+.structure__content ul ul li:after{
+	border-width: 0 0 1px;
+	height: 24px;
 }
 
 
