@@ -793,7 +793,7 @@ $(document).ready(function() {
 				slideBy: 1,
 				dots: false,
 				lazyLoad: false,
-				loop: 1,
+				loop: 0,
 				// onInitialized: functionName,
 				// onResized: functionName,
 				// onTranslated: functionName,

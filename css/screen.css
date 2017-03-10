@@ -467,6 +467,14 @@ h5,
 	width: 100%;
 }
 
+@media only screen and (max-width: 479px){
+	.form-buttons .button,
+	.form-buttons .button--alt{
+		padding: 0 5px;
+		font-size: 14px;
+	}
+}
+
 
 
 .bg--white {
@@ -2814,6 +2822,9 @@ input[type="checkbox"]:checked + span:after {
 .has-placeholder ~ label {
 	background: #fff;
 }
+.device .flatpickr ~ label {
+	display: none;
+}
 
 .input textarea ~ label {
 	top: 0!important;
@@ -2852,6 +2863,23 @@ input[type="checkbox"]:checked + span:after {
 	top: 0;
 }
 
+
+.input__icon{
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 20px;
+	height: 20px;
+	-webkit-transform: translate(0, -50%);
+	-ms-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	pointer-events: none;
+}
+.input__icon--date{
+	background: url(../i/icon-date.svg) no-repeat;
+	height: 20px;
+	width: 20px;
+}
 
 .input__note {
 	position: absolute;
@@ -4179,6 +4207,9 @@ img.size-xs{
 }
 .form-multiple [class^="col-"]{
 	padding-bottom: 2rem;
+}
+.form-buttons [class^="col-"]{
+	padding-bottom: 0;
 }
 .form-multiple [class^="col-xs"] {
 	padding-left: 1rem;
