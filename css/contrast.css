@@ -817,6 +817,44 @@ font-size: 18px;
 	background-color: #fff;
 	outline: 2px solid #000;
 }
+.product-card__text {
+	font-size: 18px;
+	line-height: 1.8;
+}
+.subject-card__footer {
+	border-top: 2px dotted #000;
+}
+.protection-anchor,
+.protection-anchor:hover,
+.l-layout .protection-anchor:hover {
+	display: block;
+	position: absolute;
+	width: 36px;
+	height: 36px;
+	font-size: 20px;
+	line-height: 36px;
+	font-weight: bold;
+	outline: none;
+}
+.protection-anchor > span,
+.protection-anchor > span {
+	background: #000;
+	color: #fff;
+	box-shadow: none;
+}
+.protection-anchor:hover > span,
+.protection-anchor.active > span {
+	-webkit-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+	box-shadow: none;
+	background-color: #000;
+}
+.protection-links a.active{
+	color: #fff;
+	background-color: #000;
+	outline: 2px solid #000;
+}
 
 
 .coin-memory__list {
@@ -891,3 +929,39 @@ font-size: 18px;
 	font-weight: bold;
 }
 
+.def-inline-popup .mfp-close,
+.def-inline-popup .mfp-close:hover{
+	width: 100px;
+	height: 50px;
+	position: absolute;
+	right: -50px;
+	background: #000;
+	text-indent: 0;
+	font-size: 18px;
+	line-height: 25px;
+	color: #fff;
+	box-shadow: 0 0 0 5px #fff;
+}
+@media only screen and (max-width: 1099px){
+	.def-inline-popup .mfp-close,
+	.def-inline-popup .mfp-close:hover{
+		width: 150px;
+		height: 30px;
+		right: 5px;
+		top: 5px;
+		line-height: 30px;
+	}
+}
+.mfp-close:before, .mfp-close:after{
+	content: none;
+}
+.my-mfp-slide-bottom.mfp-bg,
+.my-mfp-slide-bottom .zoom-anim-dialog {
+	-webkit-transition-duration: 0s;
+	-moz-transition-duration: 0s;
+	-o-transition-duration: 0s;
+	transition-duration: 0s;
+}
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+	opacity: 1;
+}

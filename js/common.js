@@ -994,7 +994,7 @@ $(document).ready(function() {
 			overflowY: 'auto',
 
 			midClick: true,
-			removalDelay: 300,
+			// removalDelay: 300,
 			mainClass: 'my-mfp-slide-bottom',
 
 			closeBtnInside: true,
