@@ -574,10 +574,14 @@ background-color: #000;
 	margin-bottom: 60px;
 }
 
-.selectize-input{
+.select .selectize-input{
 	border: 2px solid #000;
 	padding-left: 1rem;
 	font-weight: 700;
+}
+.select .selectize-dropdown .active {
+	background-color: #000;
+	color: #fff;
 }
 
 .input__icon{
@@ -795,7 +799,9 @@ border: 1px solid #000;
 background: transparent;
 }
 
-
+.page-main{
+	border-color: #000;
+}
 
 .accent {
 background: #000;
@@ -885,6 +891,11 @@ font-size: 18px;
 .subject-slider .owl-next:hover{
 	background-color: #000;
 }*/
+.subject-slider .owl-prev.disabled,
+.subject-slider .owl-next.disabled{
+	opacity: 0;
+	visibility: hidden;
+}
 .subject-slider .owl-prev i,
 .subject-slider .owl-next i{
 	width: 40px;
@@ -963,6 +974,23 @@ font-size: 18px;
 }
 
 
+.add-info{
+	background-color: #000;
+	font-size: 18px;
+	width: auto;
+	padding: 0 5px;
+	color: #fff;
+	box-shadow: 0 0 0 2px #000;
+}
+.add-info:hover,
+.l-layout .add-info:hover{
+	color: #000;
+	background-color: #fff;
+}
+.add-info:before{
+	content: attr(data-text);
+}
+
 .coin-memory__list {
 	border-bottom: 2px dotted #000;
 }
@@ -1039,6 +1067,49 @@ font-size: 18px;
 .form-with-frame {
 	border: 2px solid #000;
 }
+
+.usercontent .socials--user-share li, .socials--user-share li {
+	margin-right: 30px;
+}
+.socials--user-share a{
+	color: #000;
+	font-weight: bold;
+}
+.socials--user-share a:hover,
+.l-layout .socials--user-share a:hover {
+	color: #fff;
+	background-color: #000;
+	outline: none;
+}
+.socials--user-share .ico{
+	background: #fff !important;
+	-webkit-box-shadow: inset 0 0 0 2px #000;
+	box-shadow: inset 0 0 0 2px #000;
+}
+.socials--user-share a:hover .ico{
+	background: #000 !important;
+	opacity: 1;
+}
+.socials--user-share .svg *,
+.socials--user-share .svg--small * {
+	fill: #000;
+}
+.socials--user-share a:hover .svg *,
+.socials--user-share a:hover .svg--small * {
+	fill: #fff;
+}
+.socials--user-share a span:last-child {
+	position: relative;
+	left: auto;
+	top: auto;
+	width: auto;
+	height: auto;
+	overflow: visible;
+	clip: auto;
+	padding-right: 5px;
+}
+
+.news-img{ display: none; }
 
 .def-inline-popup .mfp-close,
 .def-inline-popup .mfp-close:hover{

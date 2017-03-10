@@ -88,6 +88,12 @@
 		column-gap: 0;
 	}
 
+	.news-img {
+		float: none;
+		width: auto;
+		max-width: none;
+		padding: 0 0 2rem 0;
+	}
 }
 
 @media only screen and (max-width: 1199px) {
@@ -502,6 +508,16 @@
 		margin-bottom: 1rem;
 		width: auto;
 	}
+
+	.user-share {
+		padding-bottom: 1rem;
+	}
+	.user-share__label{
+		display: inline-block;
+		vertical-align: top;
+		float: none;
+		padding-right: 0;
+	}
 }
 
 @media only screen and (max-width: 649px) {
@@ -621,6 +637,10 @@
 
 	.def-inline-popup{
 		padding: 50px 1rem 0.5rem;
+	}
+
+	.usercontent-footer {
+		padding: 1rem 0;
 	}
 }
 

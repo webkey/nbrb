@@ -140,136 +140,146 @@
 		</header>
 
 		<div class="l-layout">
-			<main class="l-main usercontent">
-				<div class="backnav">
-					<a href="#">Главная</a> &rarr; <a href="#">Рубрикатор и поиск по разделу «Законодательство»</a>
-				</div>
+			<div class="page-layout">
+				<main class="page-main usercontent">
+					<div class="backnav">
+						<a href="#">Главная</a> &rarr; <a href="#">Рубрикатор и поиск по разделу «Законодательство»</a>
+					</div>
 
-				<h1>Рубрикатор и поиск по разделу «Законодательство»</h1>
+					<h1>Рубрикатор и поиск по разделу «Законодательство»</h1>
 
-				<div class="form-with-frame form-multiple">
-					<form action="/" class="js-reg-form">
-						<div class="form-row flex-row">
-							<div class="col-xs">
-								<div class="input">
-									<input type="text" placeholder="">
-									<label>Название содержит</label>
-									<span class="focus-border"></span>
-									<span class="input__note note__success color--green"></span>
+					<div class="form-with-frame form-multiple">
+						<form action="/" class="js-reg-form">
+							<div class="form-row flex-row">
+								<div class="col-xs">
+									<div class="input">
+										<input type="text" placeholder="">
+										<label>Название содержит</label>
+										<span class="focus-border"></span>
+										<span class="input__note note__success color--green"></span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="form-row flex-row">
-							<div class="col-xs">
-								<div class="input select">
-									<select>
-										<option value=""></option>
-										<option value="-1">Любой</option>
-										<option value="1">Закон Республики Беларусь</option>
-										<option value="2">Указ Президента Республики Беларусь</option>
-										<option value="3">Постановление Правления Национального банка Республики Беларусь</option>
-										<option value="4">Письмо Национального банка Республики Беларусь</option>
-										<option value="5">Постановление Совета Министров Республики Беларусь и Национального банка Республики Беларусь</option>
-										<option value="6">Постановление Совета Министров Республики Беларусь</option>
-										<option value="7">Письмо Совета Министров Республики Беларусь и Национального банка Республики Беларусь</option>
-										<option value="8">Решение Межгосударственного Совета ЕврАзЭС (высшего органа Таможенного союза)</option>
-										<option value="9">Постановление Совета директоров Национального банка Республики Беларусь</option>
-										<option value="11">Постановление Министерства финансов Республики Беларусь</option>
-										<option value="12">Постановление Правления Национального банка Республики Беларусь и Государственного комитета по ценным бумагам Республики Беларусь</option>
-										<option value="13">Постановление Министерства финансов Республики Беларусь и Правления Национального банка Республики Беларусь</option>
-										<option value="14">Распоряжение Национального банка Республики Беларусь</option>
-									</select>
-									<label>Тип документа</label>
-									<span class="focus-border"></span>
-									<span class="input__note note__success color--green"></span>
+							<div class="form-row flex-row">
+								<div class="col-xs">
+									<div class="input select">
+										<select>
+											<option value=""></option>
+											<option value="-1">Любой</option>
+											<option value="1">Закон Республики Беларусь</option>
+											<option value="2">Указ Президента Республики Беларусь</option>
+											<option value="3">Постановление Правления Национального банка Республики Беларусь</option>
+											<option value="4">Письмо Национального банка Республики Беларусь</option>
+											<option value="5">Постановление Совета Министров Республики Беларусь и Национального банка Республики Беларусь</option>
+											<option value="6">Постановление Совета Министров Республики Беларусь</option>
+											<option value="7">Письмо Совета Министров Республики Беларусь и Национального банка Республики Беларусь</option>
+											<option value="8">Решение Межгосударственного Совета ЕврАзЭС (высшего органа Таможенного союза)</option>
+											<option value="9">Постановление Совета директоров Национального банка Республики Беларусь</option>
+											<option value="11">Постановление Министерства финансов Республики Беларусь</option>
+											<option value="12">Постановление Правления Национального банка Республики Беларусь и Государственного комитета по ценным бумагам Республики Беларусь</option>
+											<option value="13">Постановление Министерства финансов Республики Беларусь и Правления Национального банка Республики Беларусь</option>
+											<option value="14">Распоряжение Национального банка Республики Беларусь</option>
+										</select>
+										<label>Тип документа</label>
+										<span class="focus-border"></span>
+										<span class="input__note note__success color--green"></span>
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="form-row flex-row flex-row-wrap">
-							<div class="col-xs-12 col-sm-3">
-								<div class="input">
-									<input type="text" placeholder="">
-									<label>номер</label>
-									<span class="focus-border"></span>
-									<span class="input__note note__success color--green"></span>
+							<div class="form-row flex-row flex-row-wrap">
+								<div class="col-xs-12 col-sm-3">
+									<div class="input">
+										<input type="text" placeholder="">
+										<label>номер</label>
+										<span class="focus-border"></span>
+										<span class="input__note note__success color--green"></span>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-3">
+									<div class="input">
+										<i class="input__icon input__icon--date"></i>
+										<input class="flatpickr data-01-from" placeholder="" data-input>
+										<label>дата вопроса от</label>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-3">
+									<div class="input">
+										<i class="input__icon input__icon--date"></i>
+										<input class="flatpickr data-01-to" placeholder="" data-input>
+										<label>по</label>
+									</div>
+								</div>
+								<div class="col-xs-12 col-sm-3">
+									<div class="input">
+										<i class="input__icon input__icon--date"></i>
+										<input class="flatpickr" placeholder="" data-input>
+										<label>равна</label>
+									</div>
 								</div>
 							</div>
-							<div class="col-xs-12 col-sm-3">
-								<div class="input">
-									<i class="input__icon input__icon--date"></i>
-									<input class="flatpickr data-01-from" placeholder="" data-input>
-									<label>дата вопроса от</label>
+							<div class="form-row flex-row">
+								<div class="col-xs">
+									<div class="input">
+										<input type="text" placeholder="">
+										<label>Текст содержит</label>
+										<span class="focus-border"></span>
+										<span class="input__note note__success color--green"></span>
+									</div>
 								</div>
 							</div>
-							<div class="col-xs-12 col-sm-3">
-								<div class="input">
-									<i class="input__icon input__icon--date"></i>
-									<input class="flatpickr data-01-to" placeholder="" data-input>
-									<label>по</label>
+							<div class="form-buttons form-row flex-row end-xs">
+								<div class="col-xs-6 col-sm-3 end-xs">
+									<input type="reset" class="button--alt" value="Очистить поля">
+								</div>
+								<div class="col-xs-6 col-sm-3 end-xs">
+									<input type="submit" class="button" value="Найти">
 								</div>
 							</div>
-							<div class="col-xs-12 col-sm-3">
-								<div class="input">
-									<i class="input__icon input__icon--date"></i>
-									<input class="flatpickr" placeholder="" data-input>
-									<label>равна</label>
-								</div>
-							</div>
-						</div>
-						<div class="form-row flex-row">
-							<div class="col-xs">
-								<div class="input">
-									<input type="text" placeholder="">
-									<label>Текст содержит</label>
-									<span class="focus-border"></span>
-									<span class="input__note note__success color--green"></span>
-								</div>
-							</div>
-						</div>
-						<div class="form-buttons form-row flex-row end-xs">
-							<div class="col-xs-6 col-sm-3 end-xs">
-								<input type="reset" class="button--alt" value="Очистить поля">
-							</div>
-							<div class="col-xs-6 col-sm-3 end-xs">
-								<input type="submit" class="button" value="Найти">
-							</div>
-						</div>
-					</form>
-				</div>
+						</form>
+					</div>
 
-				<div class="user-section">
-					<ul>
-						<li><a href="#">Создание банков и небанковских кредитно-финансовых организаций</a></li>
-						<li><a href="#">Банковский надзор</a></li>
-						<li><a href="#">Регулирование банковских операций</a></li>
-						<li><a href="#">Валютное регулирование и валютный контроль</a></li>
-						<li><a href="#">Монетарные операции</a></li>
-						<li><a href="#">Операции с ценными бумагами</a></li>
-						<li><a href="#">Депозитарная деятельность</a></li>
-						<li><a href="#">Платежная система и цифровые технологии</a></li>
-						<li><a href="#">Эмиссионно-кассовые операции</a></li>
-						<li><a href="#">Нормативные правовые акты по вопросам лизинга</a></li>
-						<li>
-							<a href="#">Нормативные правовые акты, регулирующие порядок привлечения и предоставления микрозаймов</a>
-						</li>
-						<li>
-							<a href="#">Нормативные правовые акты по вопросам, связанным с применением Указа Президента Республики Беларусь от 17 февраля 2015 г. № 69 "Об использовании векселей"</a>
-						</li>
-						<li>
-							<a href="#">Нормативные правовые акты по вопросам, связанным с применением Указа Президента Республики Беларусь от 4 июня 2015 г. № 231 "Об осуществлении деятельности на внебиржевом рынке Форекс"</a>
-						</li>
-						<li>
-							<a href="#">Предотвращение легализации доходов, полученных преступным путем, финансирования террористической деятельности и финансирования распространения оружия массового поражения</a>
-						</li>
-						<li><a href="#">Безопасность и защита информации</a></li>
-						<li><a href="#">Бухгалтерский учет и отчетность</a></li>
-						<li><a href="#">Кредитные истории</a></li>
-						<li><a href="#">Статистическая отчетность</a></li>
-					</ul>
-				</div>
+					<div class="user-section">
+						<ul>
+							<li><a href="#">Создание банков и небанковских кредитно-финансовых организаций</a></li>
+							<li><a href="#">Банковский надзор</a></li>
+							<li><a href="#">Регулирование банковских операций</a></li>
+							<li><a href="#">Валютное регулирование и валютный контроль</a></li>
+							<li><a href="#">Монетарные операции</a></li>
+							<li><a href="#">Операции с ценными бумагами</a></li>
+							<li><a href="#">Депозитарная деятельность</a></li>
+							<li><a href="#">Платежная система и цифровые технологии</a></li>
+							<li><a href="#">Эмиссионно-кассовые операции</a></li>
+							<li><a href="#">Нормативные правовые акты по вопросам лизинга</a></li>
+							<li>
+								<a href="#">Нормативные правовые акты, регулирующие порядок привлечения и предоставления микрозаймов</a>
+							</li>
+							<li>
+								<a href="#">Нормативные правовые акты по вопросам, связанным с применением Указа Президента Республики Беларусь от 17 февраля 2015 г. № 69 "Об использовании векселей"</a>
+							</li>
+							<li>
+								<a href="#">Нормативные правовые акты по вопросам, связанным с применением Указа Президента Республики Беларусь от 4 июня 2015 г. № 231 "Об осуществлении деятельности на внебиржевом рынке Форекс"</a>
+							</li>
+							<li>
+								<a href="#">Предотвращение легализации доходов, полученных преступным путем, финансирования террористической деятельности и финансирования распространения оружия массового поражения</a>
+							</li>
+							<li><a href="#">Безопасность и защита информации</a></li>
+							<li><a href="#">Бухгалтерский учет и отчетность</a></li>
+							<li><a href="#">Кредитные истории</a></li>
+							<li><a href="#">Статистическая отчетность</a></li>
+						</ul>
+					</div>
+				</main>
 
+				<aside class="page-aside-right">
+					<div class="l-infoblock l-infoblock--aside">
+						<div class="l-infoblock-widget">
+							<p>Данный раздел не имеет статуса юридической базы. Публикация нормативных правовых актов носит справочный, информационный характер. Эталонная правовая информация распространяется Национальным центром правовой информации Республики Беларусь (<a href="http://ncpi.gov.by">Национальный центр правовой информации Республики Беларусь</a>,
+								<a href="http://pravo.by">Национальный правовой <nobr>Интернет-портал</nobr> Республики&nbsp;Беларусь</a>).</p>
+						</div>
+					</div>
+				</aside>
+			</div>
 
-			</main>
 			<footer class="l-footer bg--red">
 				
 				<div class="footer-in flex-row">

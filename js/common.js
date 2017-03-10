@@ -983,24 +983,27 @@ $(document).ready(function() {
 	/*popup initial*/
 	function popupInitial(){
 
-		$('.protection-popup-js').magnificPopup({
-			type: 'inline',
+		var $inlinePopupOpener = $('.inline-popup-open-js');
+		if ($inlinePopupOpener.length) {
+			$inlinePopupOpener.magnificPopup({
+				type: 'inline',
 
-			fixedContentPos: true,
-			fixedBgPos: true,
+				fixedContentPos: true,
+				fixedBgPos: true,
 
-			preloader: false,
+				preloader: false,
 
-			overflowY: 'auto',
+				overflowY: 'auto',
 
-			midClick: true,
-			// removalDelay: 300,
-			mainClass: 'my-mfp-slide-bottom',
+				midClick: true,
+				// removalDelay: 300,
+				mainClass: 'my-mfp-slide-bottom',
 
-			closeBtnInside: true,
-			tClose: 'Закрыть (Esc)',
-			closeMarkup: '<button title="%title%" type="button" class="mfp-close">Закрыть (Esc)</button>'
-		});
+				closeBtnInside: true,
+				tClose: 'Закрыть (Esc)',
+				closeMarkup: '<button title="%title%" type="button" class="mfp-close">Закрыть (Esc)</button>'
+			});
+		}
 	}
 
 	popupInitial();
