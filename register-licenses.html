@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<meta name="viewport" id="viewport" content="width=device-width, user-scalable=no">
 
-	<title>NBRB</title>
+	<title>Реестр специальных разрешений (лицензий) на осуществление банковской деятельности по состоянию на 12.03.2017</title>
 	<meta name="description" content="*"/>
 	<meta name="keywords" content="*"/>
 
@@ -23,6 +23,10 @@
 
 	<link rel="stylesheet" href="css/reset.min.css"/>
 	<link rel="stylesheet" href="css/flexboxgrid.min.css"/>
+
+	<!--bootstrap table-->
+	<link rel="stylesheet" href="css/lib/bootstrap-table.min.css">
+	<link rel="stylesheet" href="css/lib/bootstrap-table-fixed-columns.css">
 
 	<link rel="stylesheet" href="css/screen.css"/>
 	<link rel="stylesheet" href="css/adaptive.css"/>
@@ -137,216 +141,79 @@
 		</header>
 
 		<div class="l-layout">
+			<main class="l-main usercontent">
+				<div class="backnav">
+					<a href="#">Главная</a> &rarr;
+					<a href="#">Банковская система</a> &rarr;
+					<a href="#">действующие банки и НКФО</a> &rarr;
+					<a href="#">Реестр специальных разрешений (лицензий) на осуществление банковской деятельности по состоянию на 12.03.2017</a>
+				</div>
 
-			<div class="page-layout">
-				<main class="page-main usercontent">
-					<div class="backnav">
-						<a href="#">Главная</a> &rarr; <a href="#">Архив новостей</a>
-					</div>
-					
-					<h1>Архив новостей</h1>
-
+				<h1>Реестр специальных разрешений (лицензий) на осуществление банковской деятельности по состоянию на 12.03.2017</h1>
+				<div class="usercontent-wrap--center">
+					<p>(в соответствии со статьей 3 Закона Республики Беларусь от 17 июля 2006 года №145–3 "О внесении изменений и дополнений в Банковский кодекс Республики Беларусь")</p>
 					<form class="b-filter flex-row flex-row-padd">
-						<div class="col-xs-12 col-sm-4 col-lg-3 col-lg-offset-3">
+						<div class="col-xs-12 col-lg-6">
 							<div class="select">
 								<select>
-									<option value="2017">2017</option>
-									<option value="2016">2016</option>
-									<option value="2015">2015</option>
+									<option value="108">ОАО "АСБ Беларусбанк"</option>
+									<option value="106">ОАО "Белагропромбанк"</option>
+									<option value="109">ОАО "Белинвестбанк"</option>
+									<option value="112">ОАО "Паритетбанк"</option>
+									<option value="107">ОАО "БПС-Сбербанк"</option>
+									<option value="110">"Приорбанк" ОАО</option>
+									<option value="111">ОАО "Банк БелВЭБ"</option>
+									<option value="113">ОАО "БНБ–Банк"</option>
+									<option value="115">ОАО "Белгазпромбанк"</option>
+									<option value="116">ЗАО "АБСОЛЮТБАНК"</option>
+									<option value="119">ЗАО "РРБ–Банк"</option>
+									<option value="120">ЗАО "МТБанк"</option>
+									<option value="121">ОАО "Технобанк"</option>
+									<option value="122">"Франсабанк" ОАО</option>
+									<option value="123">ЗАО "Банк "Решение"</option>
+									<option value="124">ЗАО Банк ВТБ (Беларусь)</option>
+									<option value="125">ЗАО "Альфа–Банк"</option>
+									<option value="126">ОАО "Банк Москва–Минск"</option>
+									<option value="129">ОАО "Евроторгинвестбанк"</option>
+									<option value="130">ОАО ”Небанковская кредитно-финансовая организация ”Хоум Кредит“</option>
+									<option value="131">ЗАО "БТА Банк"</option>
+									<option value="133">ЗАО "БСБ Банк"</option>
+									<option value="137">ЗАО "Идея Банк" </option>
+									<option value="160">ЗАО "ТК Банк"</option>
+									<option value="162">ЗАО "Цептер Банк"</option>
+									<option value="180">ЗАО "Небанковская кредитно-финансовая организация "ИНКАСС.ЭКСПЕРТ"</option>
+									<option value="181">ОАО ”Небанковская кредитно-финансовая организация ”ЕРИП“</option>
+
 								</select>
 							</div>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-3">
-							<div class="select">
-								<select>
-									<option value="1">Январь</option>
-									<option value="2">Февраль</option>
-									<option value="3">Март</option>
-									<option value="4">Апрель</option>
-									<option value="5">Май</option>
-									<option value="6">Июнь</option>
-									<option value="7">Июль</option>
-									<option value="8">Август</option>
-									<option value="9">Сентябрь</option>
-									<option value="10">Октябрь</option>
-									<option value="11">Ноябрь</option>
-									<option value="12">Декабрь</option>
-								</select>
-							</div>
-						</div>
-						<div class="col-xs-12 col-sm-4 col-lg-3 end-xs">
-							<input type="submit" class="button button--wide" value="Показать">
 						</div>
 					</form>
-
-					<div class="news-list">
-						
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>08</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#">Обновленный перечень планируемых операций по регулированию ликвидности (в бел. рублях)</a></p>
-								</div>
-							</div>
-						</article>
-
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>13</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#">О внесении изменений и дополнений в Инструкцию о порядке совершения операций с банковскими платежными карточками</a></p>
-								</div>
-							</div>
-						</article>
-
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>08</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#.pdf" target="_blank">Информация о работе с обращениями граждан в Национальном банке Республики Беларусь в&nbsp;2016&nbsp;году</a></p>
-								</div>
-							</div>
-						</article>
-
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>27</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#">Информация о работе Контакт-центра Национального банка Республики Беларусь за 2016&nbsp;год</a></p>
-								</div>
-							</div>
-						</article>
-
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>08</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#">Обновленный перечень планируемых операций по регулированию ликвидности (в бел. рублях)</a></p>
-								</div>
-							</div>
-						</article>
-
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>13</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#">О внесении изменений и дополнений в Инструкцию о порядке совершения операций с банковскими платежными карточками</a></p>
-								</div>
-							</div>
-						</article> 
-
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>08</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#.pdf" target="_blank">Информация о работе с обращениями граждан в Национальном банке Республики Беларусь в&nbsp;2016&nbsp;году</a></p>
-								</div>
-							</div>
-						</article>
-
-						<article class="n-article">
-							<div class="n-date">
-								дек 2016<span>27</span>
-							</div>
-							<div class="pub-item">
-								<div class="pub__header"><a href="#">Аналитика</a></div>
-								<div class="pub__descr">
-									<p><a href="#">Информация о работе Контакт-центра Национального банка Республики Беларусь за 2016&nbsp;год</a></p>
-								</div>
-							</div>
-						</article>
-
-					</div>
-
-				</main>
-
-				<aside class="page-aside-right">
-					<div class="l-infoblock l-infoblock--aside js-infoblock-2">
-						<div class="tabs">
-							<div class="tabs__header">
-								<ul class="js-tabs-2">
-									<li><a href=".tab-item-1"><span>Статистика</span></a></li>
-									<li><a href=".tab-item-2"><span>Аналитика</span></a></li>
-								</ul>
-							</div>
-							<div class="tab__content">
-								<div class="tab-item tab-item-1">
-									<div class="pub__header"><span class="p-date">08 декабря 2016</span><a href="#">Аналитика</a></div>
-									<div class="pub__descr">
-										<p><a href="#">Показатели рынка корпоративных ценных бумаг на 01.11.2016</a></p>
-									</div>
-									<div class="pub__footer"><a href="../file.pdf" target="_blank">PDF 1,5 Мб</a></div>
-								</div>
-								<div class="tab-item tab-item-1">
-									<div class="pub__header"><span class="p-date">08 декабря 2016</span><a href="#">Аналитика</a></div>
-									<div class="pub__descr">
-										<p><a href="#">Международные резервные активы и ликвидность Республики Беларусь в иностранной валюте на 01.11.2016</a></p>
-									</div>
-									<div class="pub__footer"><a href="../file.pdf" target="_blank">PDF 1,5 Мб</a></div>
-								</div>
-								<div class="tab-item tab-item-1">
-									<div class="pub__header"><span class="p-date">08 декабря 2016</span><a href="#">Аналитика</a></div>
-									<div class="pub__descr">
-										<p><a href="#">Об открытом конкурсе на закупку</a></p>
-									</div>
-									<div class="pub__footer"><a href="../file.pdf" target="_blank">PDF 1,5 Мб</a></div>
-								</div>
-								<div class="tab-item tab-item-1">
-									<div class="pub__header"><span class="p-date">08 декабря 2016</span><a href="#">Аналитика</a></div>
-									<div class="pub__descr">
-										<p><a href="#">О состоянии золотовалютных резервов Республики Беларусь</a></p>
-									</div>
-									<div class="pub__footer"><a href="../file.pdf" target="_blank">PDF 1,5 Мб</a></div>
-								</div>
-								<div class="tab-item tab-item-2">
-									<div class="pub__header"><span class="p-date">08 декабря 2016</span><a href="#">Аналитика</a></div>
-									<div class="pub__descr">
-										<p><a href="#">Международные резервные активы и ликвидность Республики Беларусь в иностранной валюте на 01.11.2016</a></p>
-									</div>
-									<div class="pub__footer"><a href="../file.pdf" target="_blank">PDF 1,5 Мб</a></div>
-								</div>
-								<div class="tab-item tab-item-2">
-									<div class="pub__header"><span class="p-date">08 декабря 2016</span><a href="#">Аналитика</a></div>
-									<div class="pub__descr">
-										<p><a href="#">Национальный банк выпускает в обращение памятные монеты "Шлях Скарыны. Падуя" серии "Шлях Скарыны"</a></p>
-									</div>
-									<div class="pub__footer"><a href="../file.pdf" target="_blank">PDF 1,5 Мб</a></div>
-								</div>
-								<div class="tab-item tab-item-2">
-									<div class="pub__header"><span class="p-date">08 декабря 2016</span><a href="#">Аналитика</a></div>
-									<div class="pub__descr">
-										<p><a href="#">Об открытом конкурсе на закупку</a></p>
-									</div>
-									<div class="pub__footer"><a href="../file.pdf" target="_blank">PDF 1,5 Мб</a></div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</aside>
-			</div>
+					<h2>Открытое акционерное общество <b>"Сберегательный банк "Беларусбанк"</b> (ОАО "АСБ Беларусбанк")</h2>
+					<div class="text-note">Лицензия на осуществление банковской деятельности <b>№ 1</b> выдана <b>24.05.2013</b></div>
+					<ul>
+						<li>привлечение денежных средств физических и юридических лиц на счета и во вклады (депозиты)</li>
+						<li>размещение привлечённых денежных средств физических и юридических лиц на счета и во вклады (депозиты) от своего имени и за свой счёт на условиях возвратности, платности и срочности</li>
+						<li>открытие и ведение банковских счетов физических и юридических лиц</li>
+						<li>открытие и ведение счетов в драгоценных металлах</li>
+						<li>осуществление расчетного и кассового обслуживания физических и юридических лиц, в том числе банков-корреспондентов</li>
+						<li>валютно-обменные операции</li>
+						<li>купля-продажа драгоценных металлов и драгоценных камней в случаях, предусмотренных Национальным банком</li>
+						<li>привлечение и размещение драгоценных металлов во вклады (депозиты) физических и юридических лиц</li>
+						<li>выдача банковских гарантий</li>
+						<li>доверительное управление денежными средствами по договору доверительного управления денежными средствами</li>
+						<li>инкассация наличных денежных средств, платежных инструкций, драгоценных металлов и иных ценностей</li>
+						<li>выпуск в обращение (эмиссия) банковских платежных карточек</li>
+						<li>выпуск в обращение (эмиссия) электронных денег</li>
+						<li>выдача ценных бумаг, подтверждающих привлечение денежных средств во вклады (депозиты) и размещение их на счета</li>
+						<li>финансирование под уступку денежного требования (факторинг)</li>
+						<li>предоставление физическим и юридическим лицам специальных помещений или находящихся в них сейфов для банковского хранения документов и ценностей (денежных средств, ценных бумаг, драгоценных металлов и драгоценных камней и др.)</li>
+						<li>перевозка наличных денежных средств, платежных инструкций, драгоценных металлов и драгоценных камней и иных ценностей между банками и небанковскими кредитно-финансовыми организациями, их обособленными и структурными подразделениями, а также доставка таких ценностей клиентам банков и небанковских кредитно-финансовых организаций</li>
+					</ul>
+				</div>
+			</main>
 
 			<footer class="l-footer bg--red">
+				
 				<div class="footer-in flex-row">
 					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
 						<div class="foot__menu">
@@ -561,11 +428,7 @@
 	<script src="js/lib/sly.min.js"></script>
 	<script src="js/lib/jquery.easing.1.3.js"></script>
 	<script src="js/lib/js.cookie.js"></script>
-
-	
-		<script src="js/lib/ofi.min.js"></script>
-
-
+	<script src="js/lib/ofi.min.js"></script>
 	<script src="js/lib/parsley.min.js"></script>
 	<script src="js/lib/cleave.min.js"></script>
 
@@ -583,6 +446,10 @@
 	<link rel="stylesheet" href="js/lib/owl/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="js/lib/owl/assets/owl.theme.default.min.css">
 	<script type="text/javascript" src="js/lib/owl/owl.carousel.min.js"></script>
+
+	<!--bootstrap table-->
+	<script src="js/lib/bootstrap-table/bootstrap-table.min.js"></script>
+	<script src="js/lib/bootstrap-table/bootstrap-table-fixed-columns.js"></script>
 
 	<script type="text/javascript" src="js/common.js"></script>
 </body>
