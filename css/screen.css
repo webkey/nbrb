@@ -432,10 +432,13 @@ h5,
 .table th{
 	text-align: left;
 	border: 1px solid #d0c2a5;
+	background-color: #ffffff;
 	padding: 10px;
 	font-size: 14px;
 	line-height: 1.42857143;
 	vertical-align: top;
+	-ms-word-break: break-all;
+	word-break: break-all;
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -447,15 +450,17 @@ h5,
 	text-align: center;
 	vertical-align: middle;
 }
-/*.usercontent tr:nth-child(odd) td {
+/*.usercontent tr:nth-child(odd) td,*/
+.usercontent tr.streak td{
 	background: #f7f3e8;
-}*/
+}
 .usercontent tr.table-row-title td {
 	background-color: #f7f3e8;
 	color: #990033;
 	font-weight: bold;
 }
-.fht-cell{
+td[style*="width"] .fht-cell,
+th[style*="width"] .fht-cell{
 	width: inherit !important;
 }
 .usercontent tr.table-row-subtitle td {
@@ -523,6 +528,9 @@ h5,
 .bootstrap-table .fixed-table-body .table>thead>tr>th {
 	vertical-align: middle;
 	border-bottom: none;
+}
+.fixed-table-header-columns, .fixed-table-body-columns {
+	z-index: 5;
 }
 .fixed-table-container {
 	border: 1px solid #d0c2a5;
