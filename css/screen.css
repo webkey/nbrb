@@ -4202,15 +4202,23 @@ h1 + .accent {
 	font-size: 18px;
 	padding-left: 16px;
 }
-.structure__content a.has-arrow{
+a.show-more{
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: top;
+	margin-bottom: 1rem;
+}
+.structure__content a.has-arrow,
+a.show-more.has-arrow{
 	position: relative;
 	display: inline-block;
 	padding-right: 20px;
 }
-.structure__content a.has-arrow + ul{
+.simple-accordion-panel-js{
 	display: none;
 }
-.structure__content a.has-arrow:after{
+.structure__content a.has-arrow:after,
+a.show-more.has-arrow:after{
 	content: '';
 	position: absolute;
 	right: 0;
@@ -4227,16 +4235,37 @@ h1 + .accent {
 	-o-filter: saturate(0);
 	filter: saturate(0);
 }
-.structure__content a.has-arrow.active:after{
+.structure__content a.has-arrow.active:after,
+a.show-more.has-arrow.active:after{
 	-webkit-transform: rotate(-0.5turn);
 	-ms-transform: rotate(-0.5turn);
 	transform: rotate(-0.5turn);
 }
-.structure__content a span{
+a.show-more:before{
+	content: attr(data-show-text);
+	display: inline-block;
+	line-height: 1.2;
+}
+a.show-more.active:before{
+	content: attr(data-hide-text);
+}
+.structure__content a span,
+a.show-more:before{
 	border-bottom: 1px dotted #903;
 }
-.structure__content a:hover span{
+.structure__content a:hover span,
+a.show-more:hover:before{
 	border-color: #c38b00;
+}
+a.show-more span{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
 }
 .structure__content ul,
 .structure__content ul ul{

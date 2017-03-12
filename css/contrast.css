@@ -23,6 +23,10 @@ hr {
 	outline: 2px solid #000;
 }
 
+.backnav a:hover{
+	border-bottom-color: #fff;
+}
+
 .bg--red {
 	background-color: #000;
 }
@@ -1086,23 +1090,28 @@ font-size: 18px;
 .structure__item:nth-child(odd){
 	background-color: #fff !important;
 }
-.structure__content a:hover {
+.structure__content a:hover,
+a.show-more:hover{
 	outline: 6px solid #000;
 }
-.structure__content a span {
+.structure__content a span,
+a.show-more:before{
 	border-bottom: 2px dotted #000;
 }
-.structure__content a:hover span {
+.structure__content a:hover span,
+a.show-more:hover:before{
 	border-color: #fff;
 }
-.structure__content a.has-arrow:after {
+.structure__content a.has-arrow:after,
+a.show-more.has-arrow:after{
 	-webkit-background-size: 22px;
 	background-size: 22px;
 	-webkit-filter: grayscale(100%) saturate(100%);
 	-o-filter: grayscale(100%) saturate(100%);
 	filter: grayscale(100%) saturate(100%);
 }
-.structure__content a.has-arrow:hover:after {
+.structure__content a.has-arrow:hover:after,
+a.show-more.has-arrow:hover:after{
 	-webkit-filter: grayscale(100%) invert(100%) saturate(0);
 	-o-filter: grayscale(100%) invert(100%) saturate(0);
 	filter: grayscale(100%) invert(100%) saturate(0);
