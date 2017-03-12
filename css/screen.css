@@ -188,6 +188,16 @@ h1, h2, h3, h4, h5 {
 	/*max-width: 900px;*/
 }
 
+.usercontent a[target="_blank"]:after {
+	font-family: 'icomoon';
+	content:"\e902";
+	display: inline-block;
+	vertical-align: baseline;
+	margin-left: 1rem;
+	line-height: 1;
+	font-size: 16px;
+}
+
 .usercontent a[href$=".pdf"]:after {
 	content:"";
 	display: inline-block;
@@ -212,7 +222,8 @@ h1, h2, h3, h4, h5 {
 	background-size: contain;
 }
 
-.usercontent a[href$=".xls"]:after {
+.usercontent a[href$=".xls"]:after,
+.usercontent a[href$=".xlsx"]:after{
 	content:"";
 	display: inline-block;
 	vertical-align: middle;
@@ -222,16 +233,6 @@ h1, h2, h3, h4, h5 {
 	background: transparent url('../i/icons/ico-xls.svg') 0 0 no-repeat;
 	-webkit-background-size: contain;
 	background-size: contain;
-}
-
-.usercontent a[target="_blank"]:after {
-	font-family: 'icomoon';
-	content:"\e902";
-	display: inline-block;
-	vertical-align: baseline;
-	margin-left: 1rem;
-	line-height: 1;
-	font-size: 16px;
 }
 
 .usercontent .tip {
@@ -315,7 +316,7 @@ h5,
 .usercontent ul,
 .usercontent ol {
 	margin: 0 0 0 16px;
-	padding: 0 0 1rem;
+	padding: 0 0 2rem;
 	list-style-position: outside;
 	/*max-width: 900px;*/
 }
@@ -363,6 +364,19 @@ h5,
 	content:"°";
 	line-height: 1.8;
 }
+
+/*if css3 multi use column*/
+.usercontent ul.columnize,
+.usercontent ol.columnize{
+	margin-left: 0;
+}
+.usercontent .columnize li {
+	padding-left: 20px;
+}
+.usercontent .columnize li:before {
+	left: 0;
+}
+/*if css3 multi use column end*/
 
 .usercontent img {
 	max-width: 100%;
@@ -2286,7 +2300,10 @@ blockquote:after {
 	margin-bottom: 3rem;
 }
 
-h1 + .user-section{
+h1 + .user-section,
+h2 + .user-section,
+h3 + .user-section,
+h4 + .user-section{
 	/*padding-top: 0;*/
 	margin-top: 0;
 }
