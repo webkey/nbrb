@@ -3964,6 +3964,7 @@ h1 + .accent {
 .banknote-card__visual{}
 .banknote-card__figure{
 	margin-bottom: 1rem;
+	text-align: center;
 }
 .banknote-card__inner{
 	position: relative;
