@@ -1031,4 +1031,28 @@ $(document).ready(function() {
 
 	popupInitial();
 	/*popup initial end*/
+
+	/*bootstrap table*/
+	var $table = $('.table-fixed');
+	function fixedCellOfTable() {
+
+		if ($table.length) {
+			$table.bootstrapTable('destroy')
+				.bootstrapTable({
+					search: false,
+					fixedColumns: true,
+					sortable: false
+				});
+		}
+	}
+
+	$(window).on('debouncedresize', function () {
+		setTimeout(function () {
+			fixedCellOfTable();
+		}, 100)
+	});
+
+	$(window).on('load', function () {
+		fixedCellOfTable();
+	})
 });
