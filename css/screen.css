@@ -4581,6 +4581,38 @@ img.size-xs{
 	box-sizing: border-box;
 }
 
+
+.pseudo-tabs{
+	font-size: 0;
+	letter-spacing: -4px;
+}
+.user-section .pseudo-tabs{ margin-bottom: -20px; }
+.pseudo-tab{
+	display: inline-block;
+	vertical-align: top;
+	padding: 14px 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	min-width: 160px;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: normal;
+	color: #903;
+	text-align: center;
+	text-decoration: none;
+	background-color: #f7f3e8;
+	border: 1px solid #bea15c;
+	box-sizing: border-box;
+}
+.pseudo-tab.active,
+.pseudo-tab:hover{
+	background-color: #fff;
+	color: #000;
+}
+.pseudo-tab.active{
+	box-shadow: inset 0 0 0 1px #bea15c;
+}
+
 /*popups*/
 .my-mfp-slide-bottom.mfp-ready.mfp-bg {
 	opacity: 0.5;
