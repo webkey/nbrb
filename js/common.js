@@ -1037,22 +1037,30 @@ $(document).ready(function() {
 	function fixedCellOfTable() {
 
 		if ($table.length) {
-			$table.bootstrapTable('destroy')
-				.bootstrapTable({
-					search: false,
-					fixedColumns: true,
-					sortable: false
-				});
+			$table.each(function () {
+				var $tableThis = $(this);
+				var scrollWidth = (desktop === true && !!$tableThis.closest('.bootstrap-table').length) ? 17 : 0;
+				var fixedColumnsVal = (($($tableThis, $('.fixed-table-body')).outerWidth() + scrollWidth) > $tableThis.closest('.table-auto').outerWidth());
+
+				$tableThis.bootstrapTable('destroy')
+					.bootstrapTable({
+						search: false,
+						fixedColumns: fixedColumnsVal,
+						sortable: false
+					});
+			})
 		}
 	}
 
-	$(window).on('debouncedresize', function () {
+	// $(window).on('debouncedresize', function () {
+	// 	setTimeout(function () {
+	// 		fixedCellOfTable();
+	// 	}, 100)
+	// });
+
+	$(window).on('load debouncedresize', function () {
 		setTimeout(function () {
 			fixedCellOfTable();
-		}, 100)
-	});
-
-	$(window).on('load', function () {
-		fixedCellOfTable();
+		}, 50)
 	})
 });

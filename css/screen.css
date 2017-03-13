@@ -433,12 +433,12 @@ h5,
 	text-align: left;
 	border: 1px solid #d0c2a5;
 	background-color: #ffffff;
-	padding: 10px;
+	padding: 8px;
 	font-size: 14px;
 	line-height: 1.42857143;
 	vertical-align: top;
-	-ms-word-break: break-all;
-	word-break: break-all;
+	/*-ms-word-break: break-all;*/
+	/*word-break: break-all;*/
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
 }
@@ -518,6 +518,9 @@ th[style*="width"] .fht-cell{
 .table-caption:after { clear: both; }
 .table-caption .text-note{ padding-bottom: 0; }
 
+.bootstrap-table * {
+	box-sizing: border-box;
+}
 .bootstrap-table .table {
 	border: none;
 	border-bottom: 1px solid #d0c2a5;
@@ -530,6 +533,7 @@ th[style*="width"] .fht-cell{
 	vertical-align: middle;
 	border-bottom: none;
 }
+.desktop .fixed-table-header{ margin-right: 17px !important; }
 .fixed-table-header-columns, .fixed-table-body-columns {
 	z-index: 5;
 }
@@ -538,6 +542,7 @@ th[style*="width"] .fht-cell{
 	border-radius: 0;
 	-webkit-border-radius: 0;
 	-moz-border-radius: 0;
+	overflow: hidden;
 }
 .fixed-table-container thead th:first-child {
 	border-top-left-radius: 0;
