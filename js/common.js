@@ -711,8 +711,10 @@ if ($('form').length > 0) {
 					$(this)[0].$wrapper.addClass('has-content');
 				}
 			},
-			onChange: function() {
+			onChange: function(e) {
 				$(this)[0].$wrapper.addClass('has-content');
+				$(this)[0].$input.trigger('change');
+				console.log("$(this): ", $(this)[0].$input);
 			}
 		});
 	}

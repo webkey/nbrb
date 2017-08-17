@@ -3127,11 +3127,16 @@ input[type="checkbox"]:checked + span:after {
 	height: 20px;
 	width: 20px;
 }
+.input__error ~ .input__icon--date{
+	background: url(../i/icon-date-error.svg) no-repeat;
+}
 
 .input__note {
 	position: absolute;
-	top: 50%;
-	margin-top: -12px;
+	/*top: 50%;*/
+	/*margin-top: -12px;*/
+	top: 100%;
+	margin-top: 2px;
 	right: 0;
 	font-size: 14px;
 	pointer-events: none;
@@ -3198,6 +3203,9 @@ input[type="checkbox"]:checked + span:after {
 	background-color: tomato;
 }
 
+.select select{
+	width: 100%;
+}
 .select .selectize-input {
 	padding: 4px 30px 4px 0;
 	height: 50px;
@@ -3359,6 +3367,7 @@ label input + span {
 
 .form-navigation {
 	display: none;
+	padding: 2rem 0;
 }
 
 .form-navigation:after {
@@ -3534,10 +3543,6 @@ h1 + .accent {
 	color: #666;
 	box-sizing: border-box;
 	z-index: 1;
-	-webkit-transition-property: background-color, border-color;
-	transition-property: background-color, border-color;
-	-webkit-transition-duration: 0.2s;
-	transition-duration: 0.2s;
 }
 .subject-preview__inner:before{
 	content: '';
@@ -4559,10 +4564,10 @@ img.size-xs{
 	margin: 0;
 }
 .form-multiple [class^="col-"]{
-	padding-bottom: 2rem;
+	padding-bottom: 2.5rem;
 }
 .form-buttons [class^="col-"]{
-	padding-bottom: 0;
+	padding-bottom: 0 !important;
 }
 .form-multiple [class^="col-xs"] {
 	padding-left: 1rem;

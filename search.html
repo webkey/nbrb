@@ -149,11 +149,11 @@
 					<h1>Рубрикатор и поиск по разделу «Законодательство»</h1>
 
 					<div class="form-with-frame form-multiple">
-						<form action="/" class="js-reg-form">
+						<form action="/">
 							<div class="form-row flex-row">
 								<div class="col-xs">
 									<div class="input">
-										<input type="text" placeholder="">
+										<input type="text" placeholder="" autocomplete="off" data-parsley-required required>
 										<label>Название содержит</label>
 										<span class="focus-border"></span>
 										<span class="input__note note__success color--green"></span>
@@ -163,9 +163,9 @@
 							<div class="form-row flex-row">
 								<div class="col-xs">
 									<div class="input select">
-										<select>
+										<select name="" data-parsley-trigger="change" required>
 											<option value=""></option>
-											<option value="-1">Любой</option>
+											<option value="0">Любой</option>
 											<option value="1">Закон Республики Беларусь</option>
 											<option value="2">Указ Президента Республики Беларусь</option>
 											<option value="3">Постановление Правления Национального банка Республики Беларусь</option>
@@ -189,7 +189,7 @@
 							<div class="form-row flex-row flex-row-wrap">
 								<div class="col-xs-12 col-sm-3">
 									<div class="input">
-										<input type="text" placeholder="">
+										<input type="text" placeholder="" autocomplete="off" data-parsley-required required>
 										<label>номер</label>
 										<span class="focus-border"></span>
 										<span class="input__note note__success color--green"></span>
@@ -197,22 +197,22 @@
 								</div>
 								<div class="col-xs-12 col-sm-3">
 									<div class="input">
+										<input class="flatpickr data-01-from" placeholder="" data-input autocomplete="off" data-parsley-required required>
 										<i class="input__icon input__icon--date"></i>
-										<input class="flatpickr data-01-from" placeholder="" data-input>
 										<label>дата вопроса от</label>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-3">
 									<div class="input">
+										<input class="flatpickr data-01-to" placeholder="" data-input autocomplete="off" data-parsley-required required>
 										<i class="input__icon input__icon--date"></i>
-										<input class="flatpickr data-01-to" placeholder="" data-input>
 										<label>по</label>
 									</div>
 								</div>
 								<div class="col-xs-12 col-sm-3">
 									<div class="input">
+										<input class="flatpickr" placeholder="" data-input autocomplete="off" data-parsley-required required>
 										<i class="input__icon input__icon--date"></i>
-										<input class="flatpickr" placeholder="" data-input>
 										<label>равна</label>
 									</div>
 								</div>
@@ -220,7 +220,7 @@
 							<div class="form-row flex-row">
 								<div class="col-xs">
 									<div class="input">
-										<input type="text" placeholder="">
+										<input type="text" placeholder="" autocomplete="off" data-parsley-required required>
 										<label>Текст содержит</label>
 										<span class="focus-border"></span>
 										<span class="input__note note__success color--green"></span>
